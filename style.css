@@ -17,3 +17,7 @@
     aspect-ratio: 1/1;
 
 }
+
+.highlight:hover {
+    background-color: blueviolet;
+}

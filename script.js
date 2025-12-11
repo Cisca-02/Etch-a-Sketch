@@ -12,3 +12,11 @@ for(let i=0; i<256; i++){
     box.classList.add("box");
     container.appendChild(box);
 }
+
+//aggiungo un eventListener che applica la classe "highlight" al div
+const boxes = document.querySelectorAll(".box");
+boxes.forEach(box => {
+    box.addEventListener("mousemove", () =>{
+        box.classList.add("highlight");
+    });
+});
