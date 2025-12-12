@@ -84,6 +84,16 @@ multiBtn.addEventListener("click", () => {
     });
 });
 
+//seleziono il button "clear"
+const clearBtn = document.querySelector(".clear");
+
+//aggiungo un eventListener al button "clear" impostare il background color bianco
+clearBtn.addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.style.backgroundColor = "white";
+    });
+});
 
 //creo la griglia 16x16 di default
 createBoxes(DEFAULT_SIZE);
