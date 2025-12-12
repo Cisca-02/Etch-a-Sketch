@@ -6,8 +6,8 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 500px;
-    height: 500px;
+    flex-basis: 600px;
+    height: 600px;
 }
 
 .box {
@@ -16,4 +16,8 @@ body {
     flex-basis: calc(100%/16);
     height: calc(100%/16);
     border: 2px solid black;
+}
+
+.highlight:hover {
+    background-color: purple;
 }
