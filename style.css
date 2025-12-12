@@ -1,7 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
 }
 
 .container {
@@ -9,6 +16,7 @@ body {
     flex-wrap: wrap;
     flex-basis: 600px;
     width: 600px;
+    background-color: white;
 }
 
 .box {
@@ -28,9 +36,9 @@ body {
     padding: 5px 15px;
     font-size: large;
     font-weight: bold;
-    background-color: red;
-    color: black;
-    border-radius: 15%;
-    width: 150px;
+    background-color: purple;
+    color: white;
+    border-radius: 50px / 100%;
+    width: 350px;
     height: 50px;
 }
