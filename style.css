@@ -1,23 +1,19 @@
-* {
-    box-sizing: border-box;
-
+body {
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     display: flex;
-    flex: 1;
     flex-wrap: wrap;
-    width: 100vw;
-    height: 100vw;
+    flex-basis: 500px;
+    height: 500px;
 }
 
 .box {
+    display: flex;
+    box-sizing: border-box;
+    flex-basis: calc(100%/16);
+    height: calc(100%/16);
     border: 2px solid black;
-    flex: 0 0 calc(100%/16);
-    aspect-ratio: 1/1;
-
-}
-
-.highlight:hover {
-    background-color: blueviolet;
 }

@@ -1,7 +1,4 @@
 //16x16 sono uguali a 256 boxes. Posso fare un unico ciclo for in cui faccio l'append di 256 boxes.
-//NOTA: andrò a settare la width del container come 100vw (cioe' il 100% della view width) mentre per ciascuna 
-//box andrò a impostare una width del 100% / 16 = 6.25% 
-
 //setto le caratteristiche del container della griglia 16x16
 const container = document.querySelector(".container");
 
