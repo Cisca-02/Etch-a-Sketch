@@ -1,5 +1,6 @@
 //16x16 sono uguali a 256 boxes. Posso fare un unico ciclo for in cui faccio l'append di 256 boxes.
-const DEFAULT = 16;
+const DEFAULT_SIZE = 16;
+const DEFAULT_COLOR = "purple";
 //setto le caratteristiche del container della griglia 16x16
 const container = document.querySelector(".container");
 
@@ -14,14 +15,23 @@ let createBoxes = n => {
     }
 }
 
-//aggiungo un eventListener che applica la classe "highlight" al div
-let addFeature = () => {
+//funzione che cambia il colore alle boxes
+let addFeature = color => {
     const boxes = document.querySelectorAll(".box");
     boxes.forEach(box => {
         box.addEventListener("mousemove", () =>{
-            box.classList.add("highlight");
+            box.style.backgroundColor = color;
         });
     });
+}
+
+
+let randomColor = () => {
+    let r = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+
+    return `rgb(${r},${g}, ${b})`;
 }
 
 
@@ -29,7 +39,7 @@ let addFeature = () => {
 //seleziono il button ".size"
 const sizeBtn = document.querySelector(".size");
 
-//aggiungo un eventListener
+//aggiungo un eventListener al button "size" per cambiare la size
 sizeBtn.addEventListener("click", () => {
 
     let n = 0;
@@ -53,7 +63,28 @@ sizeBtn.addEventListener("click", () => {
     addFeature();
 });
 
+//seleziono il button "color"
+const colorBtn = document.querySelector(".color");
+
+//aggiungo un eventListener al button "color" per cambiare colore
+colorBtn.addEventListener("click", () => {
+    addFeature(randomColor());
+})
+
+//seleziono il button "multicolor"
+const multiBtn = document.querySelector(".multicolor");
+
+//aggiungo un eventListener al button "multicolor" per impostare il colore a multi-color
+multiBtn.addEventListener("click", () => {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+        box.addEventListener("mousemove", () =>{
+            box.style.backgroundColor = randomColor();
+        });
+    });
+});
+
 
 //creo la griglia 16x16 di default
-createBoxes(DEFAULT);
-addFeature();
+createBoxes(DEFAULT_SIZE);
+addFeature(DEFAULT_COLOR);

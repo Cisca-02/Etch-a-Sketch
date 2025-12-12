@@ -1,4 +1,4 @@
-* {
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -27,11 +27,12 @@ body {
     border: 2px solid black;
 }
 
-.highlight:hover {
-    background-color: purple;
+.buttons {
+    display: flex;
+    justify-content: start;
 }
 
-.size {
+button {
     margin: 20px;
     padding: 5px 15px;
     font-size: large;
@@ -39,6 +40,6 @@ body {
     background-color: purple;
     color: white;
     border-radius: 50px / 100%;
-    width: 350px;
+    width: 150px;
     height: 50px;
 }
